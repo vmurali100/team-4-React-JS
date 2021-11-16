@@ -44,7 +44,7 @@ body{
     -webkit-animation: top 3s linear infinite;
 }
 
-@-webkit-keyframes top{
+ @-webkit-keyframes top{
     0%{
         transform: rotatez(0deg);
         -webkit-transform: rotateZ(0deg);
