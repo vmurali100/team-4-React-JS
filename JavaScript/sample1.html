@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1 id="addContent"></h1>
+    <h2 id="changeText"></h2>
+    
+    <!-- Linking External JavaScript File -->
+    <script src="sample1.js"></script>
+
+    <!-- allways Write Javascript Code inside script Tag in HTML File -->
+    <script>
+        //Content Will display in browser, We can apply the CSS
+        document.write("Hello Iam From JavaScript")
+        document.getElementById("addContent").innerHTML="Hello Iam From H1 Element From JavaScript"
+        document.getElementById("addContent").style="color:blue; background-color:yellow"
+
+        // Popup or alert boxe
+        // window.alert("Hi Iam Fom JS")
+        // confirm("Say Yes or No")
+        // prompt("Enter Your Name")
+
+        // Content will display in console
+        console.log("Hello Iam From Console")
+
+    </script>
+
+    <button type="button" onclick='document.getElementById("changeText").innerHTML="Iam Changed Form JS"'>click to change</button>
+    <br>
+
+    <button type="button" onclick='document.getElementById("changeText").style="color:red"'>click to change</button>
+
+
+</body>
+</html>
