@@ -30,12 +30,20 @@
         console.log("Hello Iam From Console")
 
     </script>
-
+    <!-- JavaScript can change the content -->
     <button type="button" onclick='document.getElementById("changeText").innerHTML="Iam Changed Form JS"'>click to change</button>
     <br>
 
+    <!-- Applying CSS -->
+    <h3>Iam from css</h3>
     <button type="button" onclick='document.getElementById("changeText").style="color:red"'>click to change</button>
 
+    <!-- Javascript can hide html elements -->
+    <p id="hide">Javascript can hide html elements</p>
+    <button type="button" onclick='document.getElementById("hide").style="display:none"'>Click to Hide</button>
+
+    <p id="show" style="display: none;"> show hidden element</p>
+    <button type="button" onclick='document.getElementById("show").style="display:block"'>Click to show</button>
 
 </body>
 </html>
