@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="dispObj"></ul>
+    <!-- Literal way of creating an object by using {} curly braces -->
+    <script>
+        var carDetails={
+        name:"verna",
+        seater:5,
+        fuel:"Pettroll",
+        price:1300000,
+        // mileage:"17km",
+        // modal:2019
+    }
+    // Adding property to an object with . Notation
+    carDetails.mileage="17km"
+
+    // Adding property with []Array brackets
+    carDetails["modal"]=2019
+
+    // document.write("Car Name : " + carDetails.name + "<br>"+ 
+    // "Seater :"+ carDetails.seater+ "<br>" +"Fuel :"+carDetails.fuel + "<br>"+ "Price : "+ carDetails.price)
+    
+
+    document.getElementById("dispObj").innerHTML="Car Name : " + carDetails.name + "<br>"+
+    "Seater : " + carDetails.seater+ "<br>" +"Fuel :"+carDetails.fuel + 
+    "<br>"+ "Price : "+ carDetails.price + "<br>"+ "Mileage :" + carDetails.mileage +"<br>"+ "Modal :" + carDetails.modal
+
+    // document.write("<h1>Leela</h1>")
+
+    
+
+
+    </script>
+</body>
+</html>
