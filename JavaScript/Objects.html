@@ -34,7 +34,41 @@
 
     // document.write("<h1>Leela</h1>")
 
-    
+    // OOP- Object Oriented Programming method of creating an object
+        // Three  types
+        // 1. Builtin Object
+        // 2. Constructor 
+        // 3. Class Way
+
+        // 1. Builtin way of Creating an Object
+
+        var personName=new Object({
+        fName:"Leela",
+        lName:"KM"
+    })
+    console.log(personName.fName,personName.lName)
+
+    // 2.Constructor way of creating an Object
+    function person(fName,lName,age){
+        this.fName=fName,
+        this.lName=lName,
+        this.age=age
+    }
+    var fullName=new person("balaji","ks",24)
+    console.log(fullName.fName+fullName.lName)
+    document.write(fullName.fName+fullName.lName+"<br>"+fullName.age +"<br>")
+
+    //Class way of creating an object
+    class cars{
+        constructor(name1,name2){
+            this.carName1=name1,
+            this.carName2=name2
+        }
+    }
+    var carNames=new cars("Maruti","Audi")
+    console.log(carNames.carName1carNames.carName2)
+    document.write(carNames.carName1 + "<br>"+ carNames.carName2)
+
 
 
     </script>
