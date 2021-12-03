@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Array Methods -->
+    <p id="citrus"></p>
+    <ul id="demo"></ul>
+    <script>
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        // document.write(fruits.length)
+        // delete fruits[1] //delete method
+        // document.write(fruits + "<br>")
+        // fruits.splice(3,0,"Lemon");
+
+        // var citrus = fruits.slice(1);
+        // document.getElementById("citrus").innerHTML = fruits + "<br><br>" + citrus;
+
+        // document.write(fruits)
+
+        var carNames1 = ["volvo", "xuv"];
+        var carNames2 = ["maruti", "Audi", "verna"];
+        var carNames3 = ["Bmw", "renault"];
+
+        var cars = carNames1.concat(carNames2, carNames3); 
+
+        // document.getElementById("dispcars").innerHTML = cars ;
+
+        //Join Method
+        document.getElementById("demo").innerHTML = fruits.join(" ** ");
+
+        // Sort Method
+        fruits.sort()
+        document.write(fruits + "<br>")
+        fruits.sort()
+        fruits.reverse()
+        document.write(fruits)
+
+    </script>
+</body>
+</html>

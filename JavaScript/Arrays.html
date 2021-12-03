@@ -5,8 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- The splice() method returns the removed items in an array. 
+        The slice() method returns the selected element(s) in an array,
+         as a new array object. The splice() method changes the original array
+         and slice() method doesn't change the original array -->
 </head>
 <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="dispcars"></p>
+    <p id="citrus"></p>
+
     <script>
         // Creating an array 
         var students=["Leela","Vamsi","sadik","Balaji"]
@@ -18,10 +27,62 @@
         students.push("Gaye","murali") //push method wiil add the element at the end of the array
         document.write(students.shift()) 
         students.unshift("balaji")
-        
-        document.write("<br>"+students)
+        document.write("<br>"+students+"<br>")
+
+        // var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        // delete fruits[1] //delete method
+        // document.write(fruits[1])
+        console.log(fruits)
+
+        // The splice() method adds new elements to an array
+        // The first parameter (2) defines the position where new elements should be added (spliced in).
+        //The second parameter (0) defines how many elements should be removed.
+        //The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+        //The splice() method returns an array with the deleted items:
+
+        // var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        // document.getElementById("demo1").innerHTML = fruits;
+
+        // fruits.splice(1, 0, "Lemon", "Kiwi");
+        // fruits.splice(0, 1);
+        // document.getElementById("demo2").innerHTML = fruits;
+          
 
         console.log(numbers.length)
+
+        // The concat() method creates a new array by merging (concatenating) existing arrays:
+        // The concat() method does not change the existing arrays. It always returns a new array.
+        // var array1 = ["volvo", "xuv"];
+        // var array2 = ["maruti", "Audi", "verna"];
+        // var array3 = ["Bmw", "renault"];
+
+        // var cars = array1.concat(array2, array3); 
+
+        // document.getElementById("dispcars").innerHTML = cars;
+
+    //The slice() method slices out a piece of an array into a new array.
+    //This example slices out a part of an array starting from array element 1 ("Orange"):
+    // var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+    // var citrus = fruits.slice(1);
+    // document.getElementById("citrus").innerHTML = fruits + "<br><br>" + citrus;
+
+    // join method
+    // var fruits = ["Banana", "Orange", "Apple", "Mango"];
+    // document.getElementById("demo").innerHTML = fruits.join(" * ");
+
+    // The sort() method sorts an array alphabetically:
+    // const fruits = ["Banana", "Orange", "Apple", "Mango"];
+    // document.getElementById("demo1").innerHTML = fruits;
+
+    // fruits.sort();
+    // document.getElementById("demo2").innerHTML = fruits;
+
+    // The reverse() method reverses the elements in an array.You can use it to sort an array in descending order:
+        // First sort the array
+    //fruits.sort();
+
+    // Then reverse it:
+    // fruits.reverse();
 
     </script>
 </body>
