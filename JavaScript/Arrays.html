@@ -9,6 +9,12 @@
         The slice() method returns the selected element(s) in an array,
          as a new array object. The splice() method changes the original array
          and slice() method doesn't change the original array -->
+
+    <!-- Numeric Sort
+    By default, the sort() function sorts values as strings.
+    This works well for strings ("Apple" comes before "Banana").
+    However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".
+    Because of this, the sort() method will produce incorrect result when sorting numbers. -->
 </head>
 <body>
     <p id="demo1"></p>
@@ -22,7 +28,7 @@
         var numbers=[4,6,8,3,6,8]
 
         // console.log(numbers.length) length method
-        
+
 
         document.write(students.pop()) //pop method will remove the element at the end of the array
         students.push("Gaye","murali") //push method wiil add the element at the end of the array
@@ -84,6 +90,7 @@
 
     // Then reverse it:
     // fruits.reverse();
+
 
     </script>
 </body>
