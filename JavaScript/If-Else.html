@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- JavaScript Control Statements | Conditional & Looping Control Statements
     JavaScript  Control Statements also known as Control Structures or Flow Control statements are statements which decide the execution
      flow of the program. Typically the program execution begins from the first line 
@@ -27,34 +27,78 @@
     <!-- 1. Conditional Control Statements -->
     <!-- A.If else controll statement-->
 
+        <p id="demo"></p>
+
     <script>
-        // Q1.) Find wheather number is Even or ODD 
-        document.write("<h1>if-else condition<h1>")
-            var x=2;
-            if(x%2==0){
-                document.write("<h3>Even Number")
-                    // document.write(x)
+      // Q1.) Find wheather number is Even or ODD
+      document.write("<h1>if-else condition<h1>");
+      var x = 2;
+      var y = 10;
+      if (x % 2 == 0) {
+        document.write("<h3>Even Number");
+        // document.write(x)
+      } else {
+        document.write("<h3>Odd Number<h3>");
+      }
+      // Q2.) Find if a number is positive or negative or 0
+      var a = -5;
+      if (a > 0) {
+        document.write("<h3>Positive<h3>");
+      } else if (a < 0) {
+        document.write("<h3>Negative<h3>");
+      } else {
+        document.write("<h3>Number is naither positive or negative<h3>");
+      }
+      // Q3.) Find if a number is positive or even
+
+    //   document.write(new Date())
+
+    //   var hour=prompt("Enter hour")
+            
+            //  if(hour>6 && hour<12){ 
+            //      document.write("Good Morning")
+            //  }else if(hour>12 && hour<16){
+            //      document.write("Good Afternoon")
+            //  }else if(hour>16 && hour<19){
+            //      document.write("Good Evening")
+            //  }else{
+            //      document.write("Good knight")
+            //  }
+
+             //  switch Case
+            var user="Subadmin";
+            switch(user){
+                case "Admin" : console.log("Admin get access full");
+                break;
+                case "Subadmin": console.log("will get access to create and delete")
+                break;
+                default : console.log("others")
             }
-            else
-            {
-                document.write("<h3>Odd Number<h3>")
-            }
-        // Q2.) Find if a number is positive or negative or 0
-            var a=-5;
-            if(a>0){
-                document.write("<h3>Positive<h3>")
-            }
-            else if(a<0){
-                document.write("<h3>Negative<h3>")
-            }
-            else{
-                document.write("<h3>Number is naither positive or negative<h3>")
-            }
-        // Q3.) Find if a number is positive or even
-        
+
+            var day;
+        switch (new Date().getDay()) {
+        case 0:
+            day = "Sunday";
+            break;
+        case 1:
+            day = "Monday";
+            break;
+        case 2:
+            day = "Tuesday";
+            break;
+        case 3:
+            day = "Wednesday";
+            break;
+        case 4:
+        day = "Thursday";
+            break;
+        case 5:
+            day = "Friday";
+            break;
+        case  6:
+            day = "Saturday";
+        }
+        document.getElementById("demo").innerHTML = "Today is " + day;
     </script>
-        
-
-
-</body>
+  </body>
 </html>
