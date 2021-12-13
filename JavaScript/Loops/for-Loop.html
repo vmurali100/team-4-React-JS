@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="myUl"></ul>
+    <!-- For Loop -->
+   <script>
+        var fruits=["lemon","Apple","Orange"]
+        // document.write(fruits)
+
+        // for(i=0;i<fruits.length; i++){
+        //     document.write(fruits[i]+"<br>")
+        // }
+
+        // Number Itaretion
+        // for(i=0; i<=1000; i++){
+        //     document.write(i + "<br>")
+        // }
+
+    var students=[
+    {
+        "id": 1645,
+        "email": "CBoomer@dolor.net",
+        "username": "HWarren",
+        "password": "v4wld"
+    },
+    {
+        "id": 1646,
+        "email": "CGentenaar@hendrerit.com",
+        "username": "BShaffer",
+        "password": "y2Crz"
+    },
+    {
+        "id": 1647,
+        "email": "SKeen@dolor.org",
+        "username": "VEvans",
+        "password": "qjNFG"
+    },
+    {
+        "id": 1648,
+        "email": "NLightner@tincidunt.gov",
+        "username": "CCattanach",
+        "password": "TrW2e"
+    },
+    {
+        "id": 1649,
+        "email": "WYuan@egestas.net",
+        "username": "SBranscombe",
+        "password": "gxY9c"
+    },
+    {
+        "id": 1650,
+        "email": "SFowler@amet.io",
+        "username": "GMalmfeldt",
+        "password": "5kEc4"
+    },
+    {
+        "id": 1651,
+        "email": "LGlean@vel.ly",
+        "username": "JMahan",
+        "password": "f2lwS"
+    },
+    {
+        "id": 1652,
+        "email": "ASaur@pulvinar.io",
+        "username": "NBubel",
+        "password": "JLNNK"
+    },
+    {
+        "id": 1653,
+        "email": "JKoskovich@at.ly",
+        "username": "MBergin",
+        "password": "b5ect"
+    },
+    {
+        "id": 1654,
+        "email": "TGover@amet.ly",
+        "username": "AAhmad",
+        "password": "FmCLj"
+    }
+]
+
+    var dispStudents="";
+    for(i=0;i<students.length;i++){
+        for(a in students[i]){
+            dispStudents=dispStudents+ a + " : "+ students[i][a] +"<br>";
+        }
+    }
+    // document.write(dispStudents)
+    document.getElementById("myUl").innerHTML= dispStudents + "<br>" ;
+    console.log(dispStudents);
+
+    
+
+
+        
+   </script>
+</body>
+</html>

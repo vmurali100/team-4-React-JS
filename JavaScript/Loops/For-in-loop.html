@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="display"></p>
+    <ul id="obj"></ul>
+    <li id="dispJson"></li>
+    <img src="" alt="" id="myImage">
+
+    <script>
+        var person={
+            name:"Sadik",
+            age:27,
+            place:"CTR"
+        }
+        // document.write("Name : " +person.name)
+        // document.getElementById("display").innerHTML=person.age;
+
+        // for a in loop (a will represent the property of object or key)
+        // Type-1
+        // for(a in person){
+            // console.log(person[a])
+            // document.write(a + " : " + person[a] + "<br>")
+                        
+        // }
+
+        // Type-2
+        // var displayPerson="";
+        // for(a in person){
+        //     displayPerson = displayPerson+ a + " : " + person[a] + "<br>"
+        // }
+        // document.getElementById("obj").innerHTML=displayPerson;
+
+
+        // Type-3 JSON Object
+        var studentDetails={
+    "_id": "60f018194ee2947b84b3883d",
+    "index": 0,
+    "guid": "3a7056b5-f7ca-42cc-8427-a82cf1d65a93",
+    "isActive": false,
+    "balance": "$1,174.49",
+    "picture": "http://placehold.it/32x32",
+    "age": 30,
+    "eyeColor": "green",
+    "name": "Ferguson Ayers",
+    "gender": "male",
+    "company": "PERMADYNE",
+    "email": "fergusonayers@permadyne.com",
+    "phone": "+1 (970) 582-3600",
+    "address": "333 Macon Street, Weedville, Tennessee, 726",
+    "about": "Id magna voluptate labore nisi magna ad labore enim esse velit fugiat. Do laboris cillum esse est non incididunt voluptate officia adipisicing. Ut ipsum est nostrud ipsum ullamco dolor duis ipsum nostrud do sit ea ut nostrud. Proident id pariatur quis nulla pariatur tempor eu excepteur magna eu ipsum ex nulla. Non exercitation laborum dolore tempor in commodo non ullamco id nostrud nulla. Minim aliqua esse excepteur sit exercitation. Mollit commodo dolore duis do duis ad sit.\r\n",
+    "registered": "2015-07-03T02:51:40 -06:-30",
+    "latitude": 34.730774,
+    "longitude": 72.310217,
+        }
+
+        var dispJsonObj="";
+        for(a in studentDetails){
+            if(a == picture){
+                document.getElementById("myImage").setAttribute("src",studentDetails[a])
+            }else{
+            dispJsonObj=dispJsonObj + a + " : " +studentDetails[a] + "<br>"
+        }
+        }
+
+        document.getElementById("dispJson").innerHTML=dispJsonObj
+
+
+
+    </script>
+</body>
+</html>
