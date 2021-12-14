@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div{
+            border: 1px solid;
+            float: left;
+            margin-right: 10px;
+        }
+        
+        .table{
+            width: 70px;
+            float: left;
+            margin-right: 10px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <table id="myTable" border="1">
+        <tr>
+            <th>Id</th>
+            <th>EMail</th>
+            <th>UserName</th>
+            <th>Password</th>
+        </tr>
+    </table>
+    <!-- <div id="myDivs"></div>-->
+    <script>
+        // for(i=2;i<5;i++){
+        //    var myDiv=document.createElement("div");
+        //    myDiv.setAttribute("class","table")
+        //    var results="";
+        //    for(j=1;j<=10;j++){
+        //     results= results+i + "x" + j + "="+ i*j + "<br>";
+        //    }
+        //    myDiv.innerHTML=results;
+        //    document.getElementById("myDivs").appendChild(myDiv);
+        // } 
+
+        // for(i=2;i<20;i++){
+        //    var myDiv=document.createElement("div");
+        //    myDiv.setAttribute("class","div")
+        //    var results="";
+        //    for(j=1;j<=10;j++){
+        //     results= results+i + "x" + j + "="+ i*j + "<br>";
+        //    }
+        //    myDiv.innerHTML=results;
+        //    document.body.appendChild(myDiv);
+        // }
+        
+        var students=[
+            {
+        "id": 415,
+        "email": "WPatillo@hendrerit.ly",
+        "username": "MHolland",
+        "password": "w8JXJ"
+        },
+        {
+            "id": 416,
+            "email": "EReddin@hendrerit.com",
+            "username": "VUlvestad",
+            "password": "DoRbB"
+        },
+            ]
+
+        for(i=0;i<students.length;i++){
+                var myTr=document.createElement("tr")
+                for(a in students[i]){
+                var myTd=document.createElement("td")
+                myTd.innerHTML=students[i][a]
+                myTr.appendChild(myTd);
+                }
+                document.getElementById("myTable").appendChild(myTr)
+            }
+        
+    </script>
+           
+</body>
+</html>

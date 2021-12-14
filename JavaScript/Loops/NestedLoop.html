@@ -7,7 +7,7 @@
     <title>Document</title>
     <style>
         div#myDiv{
-            width: 50px;
+            width: 70px;
             float: left;
             border: 1px solid;
             margin-right: 10px;
@@ -15,7 +15,7 @@
     </style>
 </head>
 <body>
-    <div id="myDiv"></div>
+   
     <script>
         // Nested Looping (multiplication Table)
 
@@ -23,9 +23,14 @@
     var myTable="";
     for(i=2; i<=5; i++){
     for(j=1; j<=10;j++){
+        
         myTable= myTable + i + "x" + j + "=" + i * j + "<br>";
     }
-       document.getElementById("myDiv").innerHTML=myTable;
+    var dives=document.createElement("div")
+    document.getElementById("myDiv").innerHTML=myTable + "<br>";
+
+    dives.appendChild("myDiv")
+
     }
    
 
