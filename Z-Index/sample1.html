@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      #parent {
+      #parent-1 {
         position: absolute;
         width: 500px;
         background: grey;
@@ -23,8 +23,9 @@
         margin: 20px auto;
         z-index: -1;
       }
-  second {
+      parent-2 {
   position: absolute;
+  width: 300px;
   left: 0px;
   top: 0px;
   z-index: -1;
@@ -43,12 +44,12 @@ Note: z-index only works on positioned elements
 Note: If two positioned elements overlap without a z-index specified, 
 the element positioned last in the HTML code will be shown on top.  -->
 
-    <div id="parent">
-      <div id="child">
+    <div id="parent-1">
+      <div id="firstChild">
         <h2>Hello World From Z Index Topic</h2>
       </div>
     </div>
-    <div id="second" style="background: red;">
+    <div id="parent-2" style="background: red;">
         <h2>I am from Second Element</h2>
     </div>
   </body>

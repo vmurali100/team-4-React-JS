@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Numeric Sort
+    By default, the sort() function sorts values as strings.
+    This works well for strings ("Apple" comes before "Banana").
+    However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".
+    Because of this, the sort() method will produce incorrect result when sorting numbers. -->
+    <script>
+        const points = [40, 100, 1, 5, 25, 10];
+        document.getElementById("demo1").innerHTML = points;  
+
+        points.sort(function(a, b){return a - b});
+        points.sort(function(a, b){return b - a}); //Sort the array in descending order:
+        document.getElementById("demo2").innerHTML = points;
+    </script>
+</body>
+</html>
