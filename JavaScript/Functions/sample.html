@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+
+    <script>
+        var myFunction=function(fName,lName){
+           document.write("Iam From Function : "+fName+" " + lName + "<br>")
+        }
+        myFunction("Leela","KM")
+
+        function greetJs(){
+            console.log("greatings form function")
+        }
+        greetJs()
+
+        var result=myFunction1(5,6)
+        function myFunction1(a,b){
+            return a*b;
+        }
+        document.write(result + "<br>");
+
+        //Self Invoked Function
+        (function () {
+        document.getElementById("demo").innerHTML = "Hello! I called myself";
+        })();
+
+        //Arrow Function 
+
+        var addNum=(x,y)=>{return x * y}
+        document.write(addNum(3,4))
+
+    </script>
+</body>
+</html>
