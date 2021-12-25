@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="heading">Iam from H2 Dom</h2>
+    <h2 id="Heading">Iam From Heading-1</h2>
+    <h2 id="heading">Iam From Heading-2</h2>
+    <h3 class="head1">Iam DOM heading-3</h3>
+    <h3 class="head1">Iam DOM heading-4</h3>
+
+    
+    <p class="display">Iam From Paragraph DOM</p>
+    <h1 id="displayText"></h1>
+    <hr>
+    <button id="change">Change</button>
+
+
+    <script>
+        // Single Selector
+        document.getElementById("displayText").innerHTML="Iam From DOM";
+        document.querySelector(".display").style.color="red";
+        document.querySelector(".head1").style.background="blue";
+
+        // Adding an Attribute
+        document.getElementById("change").setAttribute("onclick","changeColor()");
+        function changeColor(){
+            document.getElementById("heading").style.color="red";
+        }
+
+        
+    </script>
+</body>
+</html>

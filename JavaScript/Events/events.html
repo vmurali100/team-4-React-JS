@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="date"></h2>
+    <!-- <button type="button" onclick="addNum()">Button</button> -->
+    <h1 onmouseover="style.color='red'" onmouseout="style.color='black'">Mouse over this text</h1>
+    <button onclick="this.innerHTML = Date()">Click To Get Date</button>
+    <button onclick="document.getElementById('date').innerHTML = Date()">Click To Get Date</button>
+    <hr>
+
+    <button onclick="displayDate()">get Date</button>
+    <script>
+        function addNum(){
+            console.log("Iam from Button")
+        }
+        addNum()
+
+        function displayDate() {
+        document.getElementById("date").innerHTML = Date();
+        }
+
+    </script>
+</body>
+</html>
