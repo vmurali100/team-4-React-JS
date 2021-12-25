@@ -24,8 +24,8 @@
         // for a in loop (a will represent the property of object or key)
         // Type-1
         // for(a in person){
-            // console.log(person[a])
-            // document.write(a + " : " + person[a] + "<br>")
+        //     console.log(person[a])
+        //     document.write(a + " : " + person[a] + "<br>")
                         
         // }
 
@@ -61,12 +61,12 @@
 
         var dispJsonObj="";
         for(a in studentDetails){
-            if(a == picture){
-                document.getElementById("myImage").setAttribute("src",studentDetails[a])
-            }else{
+            // if(a == picture){
+            //     document.getElementById("myImage").setAttribute("src",studentDetails[a])
+            // }else{
             dispJsonObj=dispJsonObj + a + " : " +studentDetails[a] + "<br>"
         }
-        }
+        // }
 
         document.getElementById("dispJson").innerHTML=dispJsonObj
 

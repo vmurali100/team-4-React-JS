@@ -8,8 +8,8 @@
 </head>
 <body>
     <h2 id="heading">Iam from H2 Dom</h2>
-    <h2 id="Heading">Iam From Heading-1</h2>
-    <h2 id="heading">Iam From Heading-2</h2>
+    <h2 id="heading">Iam From Heading-1</h2>
+    <h2 >Iam From Heading-2</h2>
     <h3 class="head1">Iam DOM heading-3</h3>
     <h3 class="head1">Iam DOM heading-4</h3>
 
@@ -22,15 +22,27 @@
 
     <script>
         // Single Selector
-        document.getElementById("displayText").innerHTML="Iam From DOM";
-        document.querySelector(".display").style.color="red";
-        document.querySelector(".head1").style.background="blue";
+        // document.getElementById("displayText").innerHTML="Iam From DOM";
+        // document.querySelector(".display").style.color="red";
+        // document.querySelector(".head1").style.background="blue";
 
-        // Adding an Attribute
-        document.getElementById("change").setAttribute("onclick","changeColor()");
-        function changeColor(){
-            document.getElementById("heading").style.color="red";
-        }
+        // // Adding an Attribute
+        // document.getElementById("change").setAttribute("onclick","changeColor()");
+        // function changeColor(){
+        //     document.getElementById("heading").style.color="red";
+        // }
+
+        // By Using TagName //Multiple selector
+        // var headings= document.getElementsByTagName("h2");
+        // headings[0].innerHTML="Iam Changing Now"
+        // headings[1].style.color="red";
+        // headings[2].setAttribute("id","secondHead")
+
+        //By Using QuarySelectorAll
+
+        var heading= document.querySelectorAll("#heading")
+        heading[0].innerHTML="Iam Changing Now from Dom"
+        heading[1].style.color="Blue";
 
         
     </script>

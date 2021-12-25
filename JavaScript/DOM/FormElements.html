@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Mobile Names :-</legend>
+            <label for="">Nokia</label>
+            <input type="text" name="Nokia" id="Nokia"><br><br>
+            <label for="">Samsung</label>
+            <input type="text" name="Samsung" id="Samsung"><br><br>
+            <label for="">Motorola</label>
+            <input type="text" name="Motorola" id="Motorola"><br><br>
+
+            <label for="">Types</label><br><br>
+            <input type="radio" name="Types" value="SmartPhone" id="SmartPhone">SmartPhone<br>
+            <input type="radio" name="Types" value="NormalPhone" id="NormalPhone">NormalPhone<br>
+
+            <label for="">Extra Fittings</label><br>
+            <input type="checkbox" name="Fittings" value="Covers">Covers<br>
+            <input type="Checkbox" name="Fittings" value="ScreenGaurd">ScreenGaurd<br>
+            <input type="checkbox" name="Fittings" value="Bluetooth">Bluetooth<br>
+            <input type="checkbox" name="Fittings" value="MemorCard">MemorCard<br>
+
+            <button type="button" onclick="submitForm()">Submit</button>
+
+
+    </fieldset>
+    </form>
+    <table  border="1">
+        <tr>
+            <th>Nokia</th>
+            <th>Samsung</th>
+            <th>Motorola</th>
+            <th>Types</th>
+            <th>Fittings</th>
+        </tr>
+        <tbody id="tBody"></tbody>
+    </table>
+    <script>
+        var mobileModels=[];
+        function submitForm(){
+            var displayMobiles="";
+            
+            var Mobiles={
+                Nokia:document.getElementById("Nokia").value,
+                Samsung:document.getElementById("Samsung").value,
+                Motorola:document.getElementById("Motorola").value
+            }  
+
+            var radioBtns=document.getElementsByName("Types")
+            for(i=0;i<radioBtns.length;i++){
+                if(radioBtns[i].checked){
+                    Mobiles.Types=radioBtns[i].value
+                }
+            }
+
+            var checkedValues=[];
+            var allCheckBoxes=document.getElementsByName("Fittings")
+            for(i=0;i<allCheckBoxes.length;i++){
+                if(allCheckBoxes[i].checked){
+                    checkedValues.push(allCheckBoxes[i].value);
+                }
+            }
+            Mobiles.Fittings=checkedValues;
+
+            mobileModels.push(Mobiles);
+
+            for(i=0;i<mobileModels.length;i++){
+                var myTr=document.createElement("tr");
+                for(a in mobileModels[i]){
+                    var myTd=document.createElement("td");
+                    
+                    myTd.innerHTML=mobileModels[i][a] ;
+                    myTr.appendChild(myTd);
+                }
+                
+                // displayMobiles = displayMobiles + "<br>";
+                document.getElementById("myTbody").appendChild(myTr);
+            }
+            document.getElementById("myTable").innerHTML=displayMobiles;
+            
+        }
+    </script>
+</body>
+</html>

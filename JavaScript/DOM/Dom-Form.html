@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">FName</label>
+        <input type="text" name="FName" id="FName"><br><br>
+
+        <label for="">LName</label>
+        <input type="text" name="LName" id="LName"><br><br>
+
+        <label for="">EMail</label>
+        <input type="email" email="EMail" id="EMail"><br><br>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+        <hr>
+        
+    </form>
+
+    <ul id="demo"></ul>
+    <script>
+        function submitForm(){
+            var person={
+                FName:document.getElementById("FName").value,
+                LName:document.getElementById("LName").value,
+                EMail:document.getElementById("EMail").value,
+            }
+            var displayObj="";
+            for(a in person){
+                displayObj=displayObj+a + " : " + person[a] + "<br>"
+            }
+            document.getElementById("demo").innerHTML=displayObj;
+        }
+    </script>
+</body>
+</html>
