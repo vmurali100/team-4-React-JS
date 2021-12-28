@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="">
+    <form >
         <fieldset>
             <legend>Mobile Names :-</legend>
             <label for="">Nokia</label>
@@ -40,11 +40,11 @@
             <th>Types</th>
             <th>Fittings</th>
         </tr>
-        <tbody id="tBody"></tbody>
+        <tbody id="myTable"></tbody>
     </table>
     <script>
         var mobileModels=[];
-        function submitForm(){
+        function submitForm(){ 
             var displayMobiles="";
             
             var Mobiles={
@@ -80,10 +80,10 @@
                     myTr.appendChild(myTd);
                 }
                 
-                // displayMobiles = displayMobiles + "<br>";
-                document.getElementById("myTbody").appendChild(myTr);
+                
+                document.getElementById("myTable").appendChild(myTr);
             }
-            document.getElementById("myTable").innerHTML=displayMobiles;
+            
             
         }
     </script>
